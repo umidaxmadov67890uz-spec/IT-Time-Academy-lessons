@@ -1,0 +1,23 @@
+.main-section-shopping_phone .main-hover:hover {
+  border: 2px solid rgba(0, 142, 204, 1);
+  box-shadow: 0px 10px 10px rgba(133, 126, 126, 0.426);
+  cursor: pointer;
+}
+
+.main-section-shopping .main-list-box:hover {
+  border: 2px solid rgba(0, 142, 204, 1);
+  box-shadow: 0px 10px 10px rgba(133, 126, 126, 0.426);
+  cursor: pointer;
+}
+
+.main-section-shopping .main-list--image:hover {
+  border: 2px solid rgba(0, 142, 204, 1);
+  box-shadow: 0px 10px 10px rgba(133, 126, 126, 0.426);
+  cursor: pointer;
+}
+
+.main-section-food_products .main-list-box:hover {
+  border: 2px solid rgba(0, 142, 204, 1);
+  box-shadow: 0px 10px 10px rgba(133, 126, 126, 0.426);
+  cursor: pointer;
+}
