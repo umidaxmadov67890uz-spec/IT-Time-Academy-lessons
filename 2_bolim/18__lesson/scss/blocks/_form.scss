@@ -1,0 +1,217 @@
+.title {
+  margin: 50px 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 46px;
+  color: #fff;
+  position: relative;
+  z-index: 100;
+}
+.form {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0 30px 110px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 0px 70px 30px #0800209b;
+  position: relative;
+  &__registration {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    align-items: center;
+    justify-content: center;
+    &__label {
+      height: 50px;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+      color: #fff;
+      font-weight: bold;
+      &__item {
+        margin-top: 5px;
+        padding: 10px;
+        border-radius: 6px;
+        border-width: 1px;
+        outline: none;
+      }
+    }
+  }
+
+  &__group {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    &__left {
+      padding-right: 50px;
+      &__gender {
+        padding-bottom: 5px;
+        display: flex;
+        gap: 20px;
+        &__label {
+          padding-bottom: 5px;
+          display: flex;
+          align-items: center;
+          font-size: 20px;
+          line-height: 1.2;
+          color: #fff;
+          font-weight: 400;
+        }
+      }
+      &__label-title {
+        font-weight: bold;
+        font-size: 25px;
+        color: #fff;
+        text-transform: uppercase;
+      }
+      &__date {
+        margin: 10px 0 20px;
+        display: grid;
+        grid-template-columns: 20% 50% 30%;
+        gap: 5px;
+        &__day {
+          padding: 5px;
+          font-size: 20px;
+        }
+        &__month {
+          padding: 5px;
+          font-size: 20px;
+        }
+        &__yeal {
+          padding: 5px;
+          font-size: 20px;
+        }
+      }
+      &__address {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &__label-title {
+          font-weight: bold;
+          font-size: 25px;
+          color: #fff;
+          text-transform: uppercase;
+        }
+        &__label {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: #fff;
+          font-weight: 400;
+          font-size: 20px;
+          &__item {
+            width: 75%;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 5px;
+            outline: none;
+          }
+        }
+      }
+      &__hobbies {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 5px;
+        &__label {
+          font-size: 20px;
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          font-weight: 400;
+          font-size: 20px;
+          color: #fff;
+        }
+      }
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      &__qualification {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &__label-title {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 25px;
+          color: #fff;
+        }
+        &__label {
+          display: flex;
+          gap: 5px;
+          font-weight: 400;
+          font-size: 20px;
+          color: #fff;
+        }
+      }
+      &__courses {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &__label-title {
+          margin: 15px 0 0;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 25px;
+          color: #fff;
+        }
+        &__label {
+          display: flex;
+          gap: 5px;
+          font-weight: 400;
+          font-size: 20px;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__line{
+    width: 90%;
+    height: 3px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background: #fff;
+  }
+
+  &__btn-group {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 50px;
+    margin: 30px 0 0;
+    &__btn-submit {
+      padding: 11px 31px;
+      font-size: 16px;
+      border-radius: 23px;
+      border: none;
+      background: #2091fa;
+      cursor: pointer;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    &__btn-reset {
+      padding: 10px 30px;
+      font-size: 16px;
+      border-radius: 23px;
+      background: transparent;
+      cursor: pointer;
+      color: #fff;
+      text-transform: uppercase;
+      border: 2px solid #2091fa;
+    }
+  }
+}
+
+.form__registration__label__item:focus{
+  border: 2px solid #2091fa;
+}
+
+.form__group__left__address__label__item:focus{
+  border: 2px solid #2091fa;
+}

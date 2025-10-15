@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto";
+}
+
+.container {
+  background-image: linear-gradient(90deg, #02036b, #01062c);
+  display: flex;
+  padding: 0 0 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin: 50px 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 46px;
+  color: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+.form {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0 30px 110px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 0px 70px 30px rgba(8, 0, 32, 0.6078431373);
+  position: relative;
+}
+.form__registration {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.form__registration__label {
+  height: 50px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+.form__registration__label__item {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 6px;
+  border-width: 1px;
+  outline: none;
+}
+.form__group {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+.form__group__left {
+  padding-right: 50px;
+}
+.form__group__left__gender {
+  padding-bottom: 5px;
+  display: flex;
+  gap: 20px;
+}
+.form__group__left__gender__label {
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+  font-weight: 400;
+}
+.form__group__left__label-title {
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.form__group__left__date {
+  margin: 10px 0 20px;
+  display: grid;
+  grid-template-columns: 20% 50% 30%;
+  gap: 5px;
+}
+.form__group__left__date__day {
+  padding: 5px;
+  font-size: 20px;
+}
+.form__group__left__date__month {
+  padding: 5px;
+  font-size: 20px;
+}
+.form__group__left__date__yeal {
+  padding: 5px;
+  font-size: 20px;
+}
+.form__group__left__address {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__group__left__address__label-title {
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.form__group__left__address__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+}
+.form__group__left__address__label__item {
+  width: 75%;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+}
+.form__group__left__hobbies {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 5px;
+}
+.form__group__left__hobbies__label {
+  font-size: 20px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+}
+.form__group__right {
+  display: flex;
+  flex-direction: column;
+}
+.form__group__right__qualification {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__group__right__qualification__label-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+}
+.form__group__right__qualification__label {
+  display: flex;
+  gap: 5px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+}
+.form__group__right__courses {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__group__right__courses__label-title {
+  margin: 15px 0 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+}
+.form__group__right__courses__label {
+  display: flex;
+  gap: 5px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+}
+.form__line {
+  width: 90%;
+  height: 3px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background: #fff;
+}
+.form__btn-group {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 50px;
+  margin: 30px 0 0;
+}
+.form__btn-group__btn-submit {
+  padding: 11px 31px;
+  font-size: 16px;
+  border-radius: 23px;
+  border: none;
+  background: #2091fa;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.form__btn-group__btn-reset {
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 23px;
+  background: transparent;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid #2091fa;
+}
+
+.form__registration__label__item:focus {
+  border: 2px solid #2091fa;
+}
+
+.form__group__left__address__label__item:focus {
+  border: 2px solid #2091fa;
+}/*# sourceMappingURL=main.css.map */
