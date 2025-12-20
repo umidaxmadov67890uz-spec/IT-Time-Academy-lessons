@@ -1,11 +1,20 @@
-.hero--bg-image{
-    background-image: url(../../images/bg-image.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 90px;
-    position: relative;
-    top: -570px;
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.hero--bg-image {
+  background-image: url(../../images/bg-image.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 90px;
+  position: relative;
+  top: -570px;
 }
 
 .hero {
@@ -13,8 +22,7 @@
   align-items: center;
   justify-content: space-between;
   &__left {
-    width: 445px;
-    height: 335px;
+    @include size (445px, 335px);
     display: flex;
     gap: 25px;
     align-items: start;
@@ -26,42 +34,55 @@
       font-weight: bold;
     }
     &__text {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
       font-weight: 300;
       font-size: $size20;
       line-height: 1.52;
       color: $color2;
     }
-    &__btn{
-        background: $color4;
-        color: $color3;
+    &__btn {
+      background: $color4;
+      color: $color3;
     }
   }
   &__right {
-    width: 690px;
-    height: 590px;
+    @include size (690px, 590px);
     &__image {
-      width: 100%;
-      height: 100%;
+      @include size (100%, 100%);
       object-fit: contain;
     }
   }
 }
 
-@media (max-width: 1200px){
-.hero__left{
-  width: 50%;
-}
+@media (max-width: 1200px) {
+  .hero__left {
+    width: 50%;
+  }
 
-  .hero__right{
+  .hero__right {
     width: 50%;
   }
 }
-@media (max-width: 850px){
-  .hero__left{
+@media (max-width: 850px) {
+  .hero__left {
     width: 80%;
   }
-  .hero__right{
+  .hero__right {
     width: 1px;
+  }
+}
+@media (max-width: 500px) {
+  .hero__left {
+    width: 100%;
+  }
+  .hero__right{
+    height: 400px;
+  }
+  .hero__left__btn {
+    margin: 0 auto;
+  }
+  .hero__left__text,
+  .hero__left__title{
+    text-align: center;
   }
 }

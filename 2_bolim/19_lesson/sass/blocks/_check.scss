@@ -1,3 +1,13 @@
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .check {
   margin-top: 200px;
   &__title {
@@ -10,8 +20,7 @@
   &__line {
     margin: 0 auto;
     margin-top: 20px;
-    width: 55px;
-    height: 3px;
+    @include size (55px, 3px);
     background: $color1;
   }
   &__cards {
@@ -83,44 +92,73 @@
             margin: 25px 0 0 30px;
           }
         }
-        &__card--position{
-            position: relative;
-            top: -125px;
+        &__card--position {
+          position: relative;
+          top: -125px;
         }
       }
-      &__item--width{
+      &__item--width {
         width: 0px;
       }
     }
   }
-  &__btn{
+  &__btn {
     display: block;
     margin: 0 auto;
   }
 }
 
-@media (max-width: 1200px ){
-  .check__cards__list{
+@media (max-width: 1200px) {
+  .check__cards__list {
     grid-template-columns: repeat(2, 1fr);
     width: 800px;
     gap: 0;
     row-gap: 30px;
   }
-  .check__cards__list__item__card{
+  .check__cards__list__item__card {
     margin: 0 auto;
   }
 }
 
-@media (max-width: 850px ){
-  .check__cards__list{
+@media (max-width: 850px) {
+  .check__cards__list {
     grid-template-columns: repeat(1, 1fr);
     width: 600px;
+    gap: 5px;
   }
-  .check__cards__list__item__bg-image{
+  .check__cards__list__item__bg-image {
     display: none;
   }
-  .check__cards__list__item--position{
+  .check__cards__list__item--position {
     position: relative;
     top: 125px;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .check__cards__list{
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 630px) {
+  .check__cards__list {
+    width: 360px;
+  }
+}
+@media (max-width: 390px) {
+  .check__cards__list {
+    width: 270px;
+  }
+  .check__cards__list__item__card {
+    width: 270px;
+  }
+  .check__cards__list__item__card__img__image {
+    height: 180px;
+  }
+  .check__cards__list__item__card__text,
+  .check__cards__list__item__card__title{
+    width: 220px;
   }
 }

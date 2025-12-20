@@ -1,3 +1,13 @@
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .leading {
   margin-top: 160px;
   display: flex;
@@ -5,8 +15,7 @@
   align-items: center;
   justify-content: space-between;
   &__left{
-      width: 550px;
-      height: 370px;
+    @include size (550px, 370px);
       &__image {
         width: 100%;
         object-fit: contain;
@@ -22,8 +31,7 @@
       color: $color1;
     }
     &__line {
-      width: 55px;
-      height: 2px;
+      @include size (55px, 2px);
       margin: 25px 0 30px;
       background: $color1;
     }
@@ -61,4 +69,37 @@
   .leading__right__text{
     width: 95%;
   }
+}
+
+@media (max-width: 650px){
+  .leading{
+    margin-top: 1150px;
+  }
+  .leading__right__line{
+    display: none;
+  }
+}
+@media (max-width: 500px){
+  .leading{
+    flex-direction: column;
+    gap: 0;
+  }
+  .leading__left{
+    @include size (70%, 250px);
+  }
+  .leading__right{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .leading__right__text{
+    margin-top: 10px;
+    text-align: center;
+  }
+  .leading__right__title{
+    text-align: center;
+    line-height: 1.2;
+  }
+
 }

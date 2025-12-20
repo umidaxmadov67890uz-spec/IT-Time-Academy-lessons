@@ -31,3 +31,9 @@
         border-color: blue;
     }
 }
+
+@media (max-width: 700px){
+    html{
+        font-size: 12px;
+    }
+}

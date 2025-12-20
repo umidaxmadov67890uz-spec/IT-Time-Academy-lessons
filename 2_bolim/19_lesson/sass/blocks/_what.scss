@@ -1,3 +1,13 @@
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .what {
   margin: 260px 50px 0;
   padding: 30px 0 0;
@@ -7,11 +17,11 @@
   &__bg-image {
     background-image: url(../../images/bg-image-3.png);
     background-repeat: no-repeat;
-    width: 80px;
-    height: 100px;
+    @include size(80px, 100px);
     position: relative;
     top: -20px;
     right: -1015px;
+    // border: $b;
   }
   &__title {
     margin: 0 0 25px;
@@ -25,8 +35,7 @@
   }
   &__line {
     margin: 0 auto;
-    width: 55px;
-    height: 2px;
+    @include size(55px, 2px);
     background: $color3;
     position: relative;
     top: -100px;
@@ -41,15 +50,13 @@
     &__left {
       display: flex;
       gap: 30px;
+
       &__img {
-        width: 135px;
-        height: 135px;
+        @include size(135px, 135px);
         border-radius: 50%;
         overflow: hidden;
         border: 5px solid $color3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include center;
         &__image {
           margin: 70px 0 0 30px;
           width: 300px;
@@ -110,8 +117,7 @@
     gap: 10px;
     align-items: center;
     &__box {
-      width: 10px;
-      height: 10px;
+      @include size(10px, 10px);
       border-radius: 50%;
       background: $color6;
       opacity: 0.3;
@@ -142,7 +148,7 @@
 }
 
 @media (max-width: 1200px) {
-  .what-container{
+  .what-container {
     padding: 0 20px;
   }
   .what {
@@ -156,15 +162,55 @@
 }
 
 @media (max-width: 800px) {
-  .what{
+  .what {
     margin: 100px 0 0;
-    height: 450px;
+    height: 400px;
   }
+  .what__line {
+    display: none;
+  }
+
   .what__group {
+    margin-top: 10px;
     flex-direction: column-reverse;
     gap: 20px;
   }
-  .what__group__right{
+  .what__group__right {
     width: 80%;
+  }
+  .what__group__right__text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .what__group {
+    margin-top: 10px;
+  }
+  .what__group__right__text {
+    height: 100px;
+  }
+}
+@media (max-width: 450px) {
+  .what {
+    height: 530px;
+  }
+  .what__group__right__text {
+    height: 120px;
+  }
+  .what__group__left {
+    flex-direction: column;
+    align-items: center;
+  }
+  .what__group__left__box {
+    align-items: center;
+  }
+}
+@media (max-width: 360px) {
+  .what {
+    height: 600px;
+  }
+  .what__group__right__text {
+    height: 180px;
   }
 }

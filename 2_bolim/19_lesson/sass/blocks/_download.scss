@@ -1,3 +1,13 @@
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .download {
   margin-top: 250px;
   display: flex;
@@ -5,8 +15,7 @@
   align-items: center;
   justify-content: space-between;
   &__right {
-    width: 550px;
-    height: 370px;
+    @include size (550px, 370px);
     &__image{
       width: 100%;
       object-fit: contain;
@@ -22,8 +31,7 @@
       color: $color1;
     }
     &__line {
-      width: 55px;
-      height: 2px;
+      @include size (55px, 2px);
       margin: 25px 0 30px;
       background: $color1;
     }
@@ -65,5 +73,41 @@
   }
   .download__left__text{
     width: 100%;
+  }
+}
+
+
+@media (max-width: 650px){
+  .download__left__line{
+    display: none;
+  }
+}
+@media (max-width: 500px){
+  .download{
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .download__right{
+    @include size(70%, 250px);
+  }
+  .download__left{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .download__left__text{
+    margin-top: 10px;
+    text-align: center;
+  }
+  .download__left__title{
+    text-align: center;
+    line-height: 1.2;
+  }
+
+}
+@media (max-width: 400px){
+  .download{
+    margin-top: 50px;
   }
 }
